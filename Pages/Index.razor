@@ -1,4 +1,5 @@
 @page "/"
+
 @inject HttpClient HttpClient
 @inject NavigationManager NavigationManager
 @inject OrderState OrderState
@@ -14,7 +15,7 @@
     </a>    
 </div> *@
 
-<div class="top-bar">
+@* <div class="top-bar">
     <a class="logo" href="">
         <img src="img/logo.svg" />
     </a>
@@ -28,10 +29,10 @@
         <img src="img/bike.svg" />
         <div>My Orders</div>
     </NavLink>
-</div>
+</div> *@
 
 <div class="main">
-  <h1>Blazing Pizzas</h1>
+  @* <h1>Blazing Pizzas</h1> *@
   <ul class="pizza-cards">
     @if (specials != null)
     {
@@ -97,5 +98,4 @@
   {
       specials = await HttpClient.GetFromJsonAsync<List<PizzaSpecial>>(NavigationManager.BaseUri + "specials");
   }
-}
-		
+}		
