@@ -1,6 +1,8 @@
 # CSE325 BLAZOR - Navigation
 Learn how to manage request routing by using the @page directive, Blazor routing, NavLink, and NavMenu components. Increase an app's flexibility by adding routing parameters in your Blazor components
 
+- Use route parameters to specify parts of the URL to process in the code
+
 ## SET-UP
 
 Base project cloned from and using instructions from: [BLAZOR navigation](https://learn.microsoft.com/en-us/training/modules/use-pages-routing-layouts-control-blazor-navigation/?utm_source=copilot.com)
