@@ -1,5 +1,4 @@
 using BlazingPizza;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

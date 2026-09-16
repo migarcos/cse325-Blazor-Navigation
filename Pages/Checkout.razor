@@ -37,12 +37,23 @@
             </p>
         </div>
     </div>
-
-    <button class="checkout-button btn btn-warning">
+    @* We don't want customers placing duplicate orders, so we disable the Place order button until the order is processed *@
+    <button class="checkout-button btn btn-warning"  @onclick="PlaceOrder" disabled=@isSubmitting>
         Place order
     </button>
 </div>
 
 @code {
     Order Order => OrderState.Order;
+
+    bool isSubmitting;
+
+    async Task PlaceOrder()
+    {
+        isSubmitting = true;
+        var response = await HttpClient.PostAsJsonAsync(NavigationManager.BaseUri + "orders", OrderState.Order);
+        var newOrderId= await response.Content.ReadFromJsonAsync<int>();
+        OrderState.ResetOrder();
+        NavigationManager.NavigateTo("/");
+    }
 }
