@@ -11,8 +11,9 @@ Change the remote origin
 ````
 git remote set-url origin https://github.com/migarcos/repo.git
 
-git remote -v
+git remote -v     (to verify)
 ````
+
 ### Debug notes
 
 - [CTRL] + [SHIFT] + [P]
@@ -33,3 +34,5 @@ Go to /Properties/launchSettings.json, and change:
 ### Execution 
 
 - You can use [F5] or 'dotnet run' CLI command
+
+    Is possible you need to delete the pizza.db file (Some SQLite problem about schema with **Address** table)
