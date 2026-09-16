@@ -13,7 +13,8 @@ git remote set-url origin https://github.com/migarcos/repo.git
 
 git remote -v
 ````
-## Debug notes
+### Debug notes
+
 - [CTRL] + [SHIFT] + [P]
 - .Net Generate Assets for Buil and Debug
 
@@ -28,5 +29,7 @@ Go to /Properties/launchSettings.json, and change:
 ````
 "dotnetRunMessages": true,
 ````
-## Execution 
-You can use [F5] or 'dotnet run' CLI command
+
+### Execution 
+
+- You can use [F5] or 'dotnet run' CLI command
