@@ -33,6 +33,7 @@ public class Pizza
 
     public string GetFormattedTotalPrice()
     {
-        return GetTotalPrice().ToString("0.00");
+        return GetTotalPrice().ToString("C");
+        // return GetTotalPrice().ToString("C", CultureInfo.CurrentCulture);
     }
 }
